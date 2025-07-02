@@ -24,20 +24,21 @@ function onClickAddTask() {
   }
 
   var newLiEl = document.createElement("li");
-
+  newLiEl.style.marginBottom = "10px";
   var taskSpan = document.createElement("span");
   taskSpan.textContent = toDo;
   newLiEl.appendChild(taskSpan);
 
   var deleteButton = document.createElement("button");
   deleteButton.textContent = "❌";
+  deleteButton.style.marginLeft = "10px";
   deleteButton.addEventListener("click", function () {
     listEl.removeChild(newLiEl);
   });
 
   var editButton = document.createElement("button");
   editButton.textContent = "🖍";
-
+  editButton.style.marginLeft="10px";
   editButton.addEventListener("click", function () {
     var editInput = document.createElement("input");
     editInput.type = "text";
